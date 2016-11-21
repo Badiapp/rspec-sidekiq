@@ -28,6 +28,10 @@ if defined? Sidekiq::Batch
         def jobs(*)
           yield
         end
+
+        def description=(description_argument)
+          @description_string = description_argument
+        end
       end
 
       class NullStatus < NullObject
